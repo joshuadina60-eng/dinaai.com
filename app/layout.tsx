@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { AuthDisplayPreHydrationHead } from "@/components/auth/auth-display";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import ChatSlide from "@/components/ChatSlide";
 import "./globals.css";
 
 const title = "eve Chat Template";
@@ -98,6 +99,9 @@ export default function RootLayout({ children }: { readonly children: ReactNode 
         <ThemeProvider>
           <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
+
+        <ChatSlide />
+
         <Analytics />
         <SpeedInsights />
       </body>
